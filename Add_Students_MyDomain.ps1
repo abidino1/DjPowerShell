@@ -10,14 +10,7 @@ function Get-RandomPassword {
     $ValidCharacters = 'abcdefghijkmnopqrstuvwxyzABCDEFGHJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()-_=+'
     $Password = -join (Get-Random -InputObject $ValidCharacters -Count $Length)
     return $Password
-}
-
-# Specify your domain name
-$domainName = "djamel.com"
-
-# Read the student list from the CSV file
-$studentList = Import-Csv -Path 'C:\Code\StudentList.csv'
-
+    
 # Iterate through the student list
 foreach ($student in $studentList) {
 
