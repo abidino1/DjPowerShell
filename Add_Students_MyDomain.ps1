@@ -10,7 +10,7 @@ function Get-RandomPassword {
     $ValidCharacters = 'abcdefghijkmnopqrstuvwxyzABCDEFGHJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()-_=+'
     $Password = -join (Get-Random -InputObject $ValidCharacters -Count $Length)
     return $Password
-    
+}
 # Iterate through the student list
 foreach ($student in $studentList) {
 
